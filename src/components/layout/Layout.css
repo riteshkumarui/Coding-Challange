@@ -1,0 +1,14 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    margin-top: 80px;
+    top: 0;
+    left: 0;
+}
+
+.content {
+    padding: 20px;
+    color: #676767;
+}
