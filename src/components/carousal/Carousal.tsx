@@ -16,8 +16,6 @@ export const Carousal: React.FC<Props> = (props) => {
     useEffect(() => {
         const index = props.items.findIndex(item => item.id === props.selectedItem?.id) + 1;
         setCount(index);
-        console.log(index);
-        console.log(props.items);
         const filterItem = props.items[index - 1];
         const {thumbnail: {
             alt,
@@ -25,7 +23,6 @@ export const Carousal: React.FC<Props> = (props) => {
             width,
             height
         }} = filterItem
-        console.log(href);
         setCurrentImage({alt, href, width, height});
     },[])
 
@@ -47,7 +44,6 @@ export const Carousal: React.FC<Props> = (props) => {
         if ( count === 1) {
             setCount(props.items.length);
         }
-        console.log(count);
     }
 
     const handleNext = () => {
